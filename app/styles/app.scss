@@ -8,6 +8,7 @@ $c-secondary: #4bb5c1;
 $c-secondary-light: #7fc6bc;
 $c-white: #edf7f2;
 $c-pure-white: #fff;
+$c-black: #282828;
 
 $m-gutter: 1rem;
 $m-max-width: 60rem;
@@ -19,3 +20,30 @@ $font: 'Dosis', sans-serif;
 @import 'reset';
 @import 'nav';
 @import 'layout';
+
+.index-main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: $c-primary;
+}
+
+.heading {
+  color: $c-black;
+  font-size: 3rem;
+}
+
+.button-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-link {
+  padding: ($m-gutter / 2) $m-gutter;
+  border: 0;
+  border-radius: 0.5rem;
+  background: $c-black;
+  color: $c-white;
+  font-size: 2rem;
+}
