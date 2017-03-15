@@ -3,7 +3,7 @@
   <div class="section header">
       <nav class="top-nav">
         <span class="top-nav__left">
-          <a href="#">Ribbiter</a>
+          <router-link :to="{ name: 'index' }">Ribbiter</router-link>
         </span>
         <span class="top-nav__right">
           <a href="#">Ribbits</a>

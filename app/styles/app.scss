@@ -13,6 +13,8 @@ $c-black: #282828;
 $m-gutter: 1rem;
 $m-max-width: 60rem;
 
+$s-shadow-1: 4px 6px 20px -2px $c-black;
+
 $font: 'Dosis', sans-serif;
 
 @import 'font-awesome';
@@ -20,30 +22,51 @@ $font: 'Dosis', sans-serif;
 @import 'reset';
 @import 'nav';
 @import 'layout';
+@import 'index';
 
-.index-main {
+.register-main {
   display: flex;
   justify-content: center;
-  width: 100vw;
   height: 100vh;
-  background: $c-primary;
+  background: $c-white;
 }
 
-.heading {
-  color: $c-black;
-  font-size: 3rem;
-}
-
-.button-links {
+.register-card {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  width: 25rem;
+  background: $c-pure-white;
+  box-shadow: $s-shadow-1;
+
+  &__heading {
+    padding: $m-gutter / 2;
+    background: $c-primary;
+    color: $c-white;
+  }
+
+  &__form {
+    padding: 0 ($m-gutter / 2);
+  }
+
+  &__title {
+    margin: 0.5rem 0;
+  }
+
+  &__buttons {
+    margin: $m-gutter (-$m-gutter / 2);
+    border-top: 1px solid $c-secondary;
+  }
 }
 
-.button-link {
-  padding: ($m-gutter / 2) $m-gutter;
+.input {
+  width: 100%;
   border: 0;
-  border-radius: 0.5rem;
-  background: $c-black;
-  color: $c-white;
-  font-size: 2rem;
+  border-bottom: 2px solid $c-secondary;
+  outline: none;
+  background: $c-pure-white;
+
+  &:focus {
+    border-bottom: 2px solid $c-secondary-light;
+  }
 }
