@@ -50,11 +50,14 @@ $font: 'Dosis', sans-serif;
   }
 
   &__title {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 0;
   }
 
   &__buttons {
-    margin: $m-gutter (-$m-gutter / 2);
+    display: flex;
+    justify-content: space-between;
+    margin: $m-gutter (-$m-gutter / 2) 0;
+    padding: $m-gutter ($m-gutter / 2);
     border-top: 1px solid $c-secondary;
   }
 }
@@ -65,8 +68,26 @@ $font: 'Dosis', sans-serif;
   border-bottom: 2px solid $c-secondary;
   outline: none;
   background: $c-pure-white;
+  font-size: 1rem;
 
   &:focus {
     border-bottom: 2px solid $c-secondary-light;
+  }
+}
+
+.button {
+  padding: $m-gutter / 2;
+  border: 0;
+  border-radius: 0.2rem;
+  background: $c-pure-white;
+
+  &__login {
+    background: $c-white;
+    color: $c-secondary;
+  }
+
+  &__signup {
+    background: $c-primary;
+    color: $c-white;
   }
 }

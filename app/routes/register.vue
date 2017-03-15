@@ -18,8 +18,8 @@
               <input type="text" name="password" class="input">
             </p>
             <div class="register-card__buttons">
-              <a href="#"><button type="button" name="login">Login</button></a>
-              <a href="#"><button type="button" name="sign-up">Sign Up</button></a>
+              <a href="#"><button type="button" name="login" class="button button__login">Login</button></a>
+              <a href="#"><button type="button" name="sign-up" class="button button__signup">Sign Up</button></a>
             </div>
           </form>
         </div>
