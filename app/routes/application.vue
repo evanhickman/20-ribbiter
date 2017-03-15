@@ -1,6 +1,8 @@
 <template lang="html">
-  <div class="">
+  <div class="app">
+  <top-nav>
 
+  </top-nav>
   </div>
 </template>
 
