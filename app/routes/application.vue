@@ -1,13 +1,24 @@
 <template lang="html">
   <div class="app">
-  <top-nav>
-
-  </top-nav>
+  <div class="section header">
+      <nav class="top-nav">
+        <span class="top-nav__left">
+          <a href="#">Ribbiter</a>
+        </span>
+        <span class="top-nav__right">
+          <a href="#">Ribbits</a>
+          <a href="#">Frogs</a>
+          <a href="#">Login</a>
+        </span>
+      </nav>
+  </div>
+  <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Application',
   data() {
     return {
     };

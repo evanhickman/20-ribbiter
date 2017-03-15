@@ -1,0 +1,21 @@
+.header {
+  background: $c-primary;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: $m-gutter;
+  font-size: 1.5rem;
+
+  &__right {
+    > * + * {
+      margin-left: $m-gutter;
+    }
+  }
+
+
+  a {
+    color: $c-white;
+  }
+}
