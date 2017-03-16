@@ -28,21 +28,10 @@
                 <div class="form-card__block load-block">
                   <a href="#"><button type="button" class="button is-info load-button">Load New Ribbits</button></a>
                 </div>
-                <div class="form-card__block ribbit-block">
+                <div v-for="item in posts.items" class="form-card__block ribbit-block">
                   <a href="#" class="username">@bob</a>
                   <p class="ribbit-block__content">Sample ribbit content</p>
-                </div>
-                <div class="form-card__block ribbit-block">
-                  <a href="#" class="username">@bob</a>
-                  <p class="ribbit-block__content">Sample ribbit content</p>
-                </div>
-                <div class="form-card__block ribbit-block">
-                  <a href="#" class="username">@bob</a>
-                  <p class="ribbit-block__content">Sample ribbit content</p>
-                </div>
-                <div class="form-card__block ribbit-block">
-                  <a href="#" class="username">@bob</a>
-                  <p class="ribbit-block__content">Sample ribbit content</p>
+                  <pre>{{item}}</pre>
                 </div>
               </div>
             </div>
@@ -60,6 +49,9 @@ export default {
   name: 'ribbits',
   data() {
     return {
+      formValues: {
+        body: '',
+      },
       posts: this.$select('posts'),
     };
   },
@@ -70,7 +62,14 @@ export default {
   },
 
   methods: {
-
+    submit() {
+      const { actionCreators: { create } } = postResource;
+      store.dispatch(create(this.formValues)).then(() => {
+        this.formValues = {
+          body: ''
+        };
+      });
+    }
   },
 };
 </script>
