@@ -1,6 +1,55 @@
 <template lang="html">
   <div class="">
-
+    <div class="section hs-bg">
+      <div class="container">
+        <div class="grid-vertical">
+          <div class="grid-vertical__item full-width-heading">
+            <h1>Recent Ribbits</h1>
+          </div>
+          <div class="grid-vertical__item grid">
+            <div class="grid__item new-post">
+              <div class="form-card">
+                <h1 class="form-card__heading">New Ribbit</h1>
+                <form @submit.prevent="submit" class="form-card__form">
+                  <p class="form-card__title">What's Going On?</p>
+                  <p>
+                    <textarea rows="8" cols="40" class="new-post__field"></textarea>
+                  </p>
+                  <div class="form-card__buttons">
+                    <a href="#"><button type="button" class="button is-info">Clear</button></a>
+                    <a href="#"><button type="submit" class="button is-success">Save</button></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="grid__item ribbit-list">
+              <div class="form-card">
+                <h1 class="form-card__heading">See What's Happening!</h1>
+                <div class="form-card__block load-block">
+                  <a href="#"><button type="button" class="button is-info load-button">Load New Ribbits</button></a>
+                </div>
+                <div class="form-card__block ribbit-block">
+                  <a href="#" class="username">@bob</a>
+                  <p class="ribbit-block__content">Sample ribbit content</p>
+                </div>
+                <div class="form-card__block ribbit-block">
+                  <a href="#" class="username">@bob</a>
+                  <p class="ribbit-block__content">Sample ribbit content</p>
+                </div>
+                <div class="form-card__block ribbit-block">
+                  <a href="#" class="username">@bob</a>
+                  <p class="ribbit-block__content">Sample ribbit content</p>
+                </div>
+                <div class="form-card__block ribbit-block">
+                  <a href="#" class="username">@bob</a>
+                  <p class="ribbit-block__content">Sample ribbit content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

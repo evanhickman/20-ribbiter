@@ -7,6 +7,7 @@
   display: flex;
   padding: ($m-gutter / 2) $m-gutter;
   box-shadow: $s-shadow-2;
+  cursor: pointer;
 
   &__right {
     margin-left: $m-gutter;
@@ -14,5 +15,9 @@
     & a {
       color: $c-secondary;
     }
+  }
+
+  &:hover {
+    box-shadow: $s-shadow-1;
   }
 }

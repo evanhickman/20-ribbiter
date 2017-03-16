@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 25rem;
   background: $c-pure-white;
   box-shadow: $s-shadow-1;
 
@@ -27,4 +26,8 @@
     padding: $m-gutter ($m-gutter / 2);
     border-top: 1px solid $c-secondary;
   }
+}
+
+.card {
+  width: 25rem;
 }

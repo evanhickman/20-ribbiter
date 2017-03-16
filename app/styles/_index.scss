@@ -1,8 +1,14 @@
 .index-main {
   display: flex;
+  position: relative;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: auto;
+}
+
+.bg {
+  position: fixed;
+  height: 100%;
   background: $c-primary;
 }
 
