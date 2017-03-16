@@ -7,13 +7,13 @@
             <h1>Users</h1>
           </div>
           <div class="grid-vertical__item grid">
-                <a href="">
+                <a v-for="user in users" href="#">
                   <div class="grid__item user-item">
                     <div class="user-item__left">
                       <img src="http://placehold.it/100" alt="" class="grid__item-image">
                     </div>
                     <div class="user-item__right">
-                      <h2 class="grid__item-name">Bob</h2>
+                      <h2 class="grid__item-name">Tony Johnson</h2>
                       <a href="#" class="grid__item-username">@bob</a>
                     </div>
                   </a>
@@ -27,11 +27,19 @@
 </template>
 
 <script>
+import store from '../store.js';
+import userResource from '../../../resources/user';
 export default {
   name: 'users',
   data() {
     return {
+      users: this.$select('users'),
     };
+  },
+
+  created() {
+    const { actionCreators: { findAll } } = userResource;
+    store.dispatch(findAll());
   },
 
   methods: {
