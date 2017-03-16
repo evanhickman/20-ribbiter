@@ -6,7 +6,7 @@
           <router-link :to="{ name: 'index' }" class="top-nav__link">Ribbiter</router-link>
         </span>
         <span class="top-nav__right">
-          <a href="#" class="top-nav__link">Ribbits</a>
+          <router-link :to="{ name: 'ribbits' }" class="top-nav__link">Ribbits</router-link>
           <router-link :to="{ name: 'users' }" class="top-nav__link">Frogs</router-link>
           <router-link :to="{ name: 'login' }" class="top-nav__link">Login</router-link>
         </span>
