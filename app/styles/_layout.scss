@@ -6,3 +6,26 @@
   max-width: $m-max-width;
   margin: 0 auto;
 }
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: -$m-gutter;
+
+  &__item {
+    flex-basis: calc(100% / 4 - 2rem);
+    margin: $m-gutter;
+  }
+}
+
+.grid-vertical {
+  display: flex;
+  flex-direction: column;
+}
