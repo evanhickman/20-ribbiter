@@ -8,7 +8,7 @@
         <span class="top-nav__right">
           <a href="#">Ribbits</a>
           <a href="#">Frogs</a>
-          <a href="#">Login</a>
+          <router-link :to="{ name: 'login' }">Login</router-link>
         </span>
       </nav>
   </div>
