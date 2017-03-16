@@ -79,6 +79,7 @@ $font: 'Dosis', sans-serif;
   padding: $m-gutter / 2;
   border: 0;
   border-radius: 0.2rem;
+  outline: none;
   background: $c-pure-white;
 
   &__login {

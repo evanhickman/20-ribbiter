@@ -1,4 +1,4 @@
-``<template lang="html">
+<template lang="html">
   <div class="">
     <div class="section register-main">
       <div class="container">
@@ -19,9 +19,12 @@
             </p>
             <div class="register-card__buttons">
               <a href="#"><button type="button" name="login" class="button button__login">Login</button></a>
-              <a href="#"><button type="button" name="sign-up" class="button button__signup">Sign Up</button></a>
+              <a href="#"><button type="submit" name="sign-up" class="button button__signup">Sign Up</button></a>
             </div>
           </form>
+        </div>
+        <div v-if="users.loading === error" class="error-card">
+          <h3>Sorry, an error occurred! Try again</h3>
         </div>
       </div>
     </div>
@@ -29,6 +32,8 @@
 </template>
 
 <script>
+import store from '../store';
+import userResource from '../../../resources/user';
 export default {
   name: 'Register',
   data() {
@@ -37,12 +42,18 @@ export default {
         username: '',
         email: '',
         password: '',
-      }
+      },
+      users: this.$select('users'),
     };
   },
 
   methods: {
-
+    submit() {
+      const { actionCreators: { create } } = userResource;
+      store.dispatch(create(this.formValues)).then(() => {
+        this.$router.push({ name: 'users' });
+      });
+    }
   },
 };
 </script>
