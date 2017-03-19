@@ -26,7 +26,7 @@
 
 <script>
 import store from '../store.js';
-import userResource from '../../../resources/user';
+import userResource from '../resources/user';
 export default {
   name: 'users',
   data() {

@@ -31,3 +31,9 @@
 .card {
   width: 25rem;
 }
+
+.error-card {
+  margin-top: $m-gutter;
+  color: $c-error;
+  text-align: center;
+}

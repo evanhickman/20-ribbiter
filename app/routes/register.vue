@@ -15,15 +15,15 @@
             </p>
             <p class="form-card__password form-card__title">Password</p>
             <p>
-              <input type="text" v-model="formValues.password" class="input">
+              <input type="password" v-model="formValues.password" class="input">
             </p>
             <div class="form-card__buttons">
-              <router-link :to="{ name: 'login' }"><button type="button" name="login" class="button is-info">Login</button></router-link>
-              <a href="#"><button type="submit" name="sign-up" class="button is-success">Sign Up</button></a>
+              <router-link :to="{ name: 'login' }" class="button is-info">Login</router-link>
+              <router-link :to="{ name: 'login' }"><button type="submit" class="button is-success">Sign Up</button></router-link>
             </div>
           </form>
         </div>
-        <div v-if="users.loading === error" class="error-card">
+        <div v-if="users.loading === 'error'" class="error-card">
           <h3>Sorry, an error occurred! Try again</h3>
         </div>
       </div>
@@ -33,7 +33,8 @@
 
 <script>
 import store from '../store';
-import userResource from '../../../resources/user';
+import userResource from '../resources/user';
+const { actionCreators: { create } } = userResource;
 export default {
   name: 'Register',
   data() {
@@ -49,11 +50,11 @@ export default {
 
   methods: {
     submit() {
-      const { actionCreators: { create } } = userResource;
+      // Dispatch a new create action
       store.dispatch(create(this.formValues)).then(() => {
-        this.$router.push({ name: 'users' });
-      });
-    }
+        this.$router.push({ name: 'login' });
+      }).catch(() => {});
+    },
   },
 };
 </script>
