@@ -36,11 +36,7 @@ export default {
   },
 
   created() {
-    const {
-      actionCreators: {
-        findAll
-      }
-    } = userResource;
+    const { actionCreators: { findAll } } = userResource;
     store.dispatch(findAll());
   },
 

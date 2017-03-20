@@ -16,8 +16,8 @@
                     <textarea rows="8" cols="40" class="new-post__field" v-model="formValues.body"></textarea>
                   </p>
                   <div class="form-card__buttons">
-                    <a href="#"><button type="button" class="button is-info">Clear</button></a>
-                    <button @click="clear" type="submit" class="button is-success">Save</button>
+                    <button @click="clear" type="button" class="button is-info">Clear</button>
+                    <button type="submit" class="button is-success">Save</button>
                   </div>
                 </form>
               </div>
