@@ -1,0 +1,30 @@
+.section {
+  padding: $m-gutter;
+}
+
+.container {
+  max-width: $m-max-width;
+  margin: 0 auto;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -$m-gutter;
+
+  &__item {
+    margin: $m-gutter;
+  }
+}
+
+.grid-vertical {
+  display: flex;
+  flex-direction: column;
+}

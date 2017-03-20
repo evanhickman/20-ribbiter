@@ -1,0 +1,34 @@
+.index-main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+}
+
+.bg {
+  position: fixed;
+  height: 100%;
+  background: $c-primary;
+}
+
+.heading {
+  margin-top: 5rem;
+  color: $c-black;
+  font-size: 3rem;
+}
+
+.button-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+
+.button-link {
+  padding: ($m-gutter / 2) $m-gutter;
+  border: 0;
+  border-radius: 0.5rem;
+  background: $c-black;
+  color: $c-white;
+  font-size: 2rem;
+}

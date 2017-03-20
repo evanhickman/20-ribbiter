@@ -1,0 +1,32 @@
+.new-post {
+  flex-basis: 20%;
+
+  &__field {
+    border: 0;
+    background: $c-white;
+  }
+}
+
+.ribbit-list {
+  flex-grow: 1;
+}
+
+.form-card__block {
+  padding: $m-gutter / 2;
+}
+
+.load-button {
+  width: 100%;
+}
+
+.ribbit-block {
+  border-top: 1px solid $c-secondary;
+
+  &__content {
+    margin-top: $m-gutter;
+  }
+
+  & a {
+    color: $c-secondary;
+}
+}
